@@ -1,8 +1,8 @@
-package cobra-plugins
+package cobraplugins
 
 import (
+	"github.com/spf13/cobra"
 	"plugin"
-  "github.com/spf13/cobra"
 )
 
 func Load(rootCdm *cobra.Command, pluginDir string) {
@@ -10,11 +10,10 @@ func Load(rootCdm *cobra.Command, pluginDir string) {
 	if err != nil {
 		panic(err)
 	}
-
 	b, err := p.Lookup("PluginCmd")
 	if err != nil {
 		panic(err)
 	}
 
-  rootCdm.AddCommand(*b.(**cobra.Command))
+	rootCdm.AddCommand(*b.(**cobra.Command))
 }
