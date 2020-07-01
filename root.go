@@ -1,4 +1,4 @@
-package main
+package cobra-plugins
 
 import (
 	"plugin"
