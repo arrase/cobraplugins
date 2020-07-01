@@ -1,4 +1,4 @@
-package load
+package "cobraplugins"
 
 import (
 	"plugin"
@@ -10,7 +10,6 @@ func Load(rootCdm *cobra.Command, pluginDir string) {
 	if err != nil {
 		panic(err)
 	}
-
 	b, err := p.Lookup("PluginCmd")
 	if err != nil {
 		panic(err)

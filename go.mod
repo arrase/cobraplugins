@@ -1,3 +1,3 @@
-module github.com/arrase/cobra-plugins
+module github.com/arrase/cobraplugins
 
 go 1.14
