@@ -1,7 +1,7 @@
 package cobraplugins
 
-type CmdCfg struct {
+type PluginCfg struct {
 	Main   string
 	Childs []string
-	Init   string
+	Run    []string
 }
