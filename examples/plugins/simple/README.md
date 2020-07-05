@@ -24,5 +24,5 @@
 
     func init() {
         ....
-        rootCmd.AddCommand(cobraplugins.GetCmd(<YOUR_PLUGIN_PATH>, "SimpleCmd"))
+        rootCmd.AddCommand(cobraplugins.GetCmd(<YOUR_PLUGIN_PATH>, "MainCmd"))
     }
