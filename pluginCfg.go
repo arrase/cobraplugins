@@ -2,6 +2,6 @@ package cobraplugins
 
 type PluginCfg struct {
 	Main   string
-	Childs []string
+	Subs   []string
 	Run    []string
 }
