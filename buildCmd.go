@@ -10,7 +10,7 @@ func BuildCmd(pluginPath string) *cobra.Command {
 	if err != nil {
 		panic(err)
 	}
-	cfg, err := p.Lookup("COBRA_PLUGIN_CFG")
+	cfg, err := p.Lookup(PLUGIN_CFG_VAR_NAME)
 	if err != nil {
 		panic(err)
 	}
