@@ -29,17 +29,15 @@ to quickly create a Cobra application.` + "`" + `,
 }
 
 func Init{{ .CmdName }}() {
-	{{ .CmdParent }}.AddCommand({{ .CmdName }}Cmd)
-
 	// Here you will define your flags and configuration settings.
-
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
 	// {{ .CmdName }}Cmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// {{ .CmdName }}Cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	{{ .CmdName }}Cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	{{ if .CmdParent }}{{ .CmdParent }}.AddCommand({{ .CmdName }}Cmd){{ end }}
 }
 `)
 }

@@ -14,6 +14,9 @@ func GetCmd(pluginPath, cmdName string) *cobra.Command {
 	if err != nil {
 		panic(err)
 	}
-
+	f, err := p.Lookup("Init" + cmdName)
+	if err == nil {
+		f.(func())()
+	}
 	return *b.(**cobra.Command)
 }
