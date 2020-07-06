@@ -15,5 +15,5 @@ func GetCmd(pluginPath, cmdName string) *cobra.Command {
 		panic(err)
 	}
 
-	retrun *b.(**cobra.Command)
+	return *b.(**cobra.Command)
 }
