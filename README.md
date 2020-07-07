@@ -3,15 +3,12 @@
 
 ### Add cobraplugins
 
-    import (
-      ......
-      
+    import (      
       "github.com/arrase/cobraplugins"
     )
 
 ### Add simple plugin to rootCmd
 
     func init() {
-        ....
         rootCmd.AddCommand(cobraplugins.GetCmd(<YOUR_PLUGIN_PATH>, "MainCmd"))
     }
