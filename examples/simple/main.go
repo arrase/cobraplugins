@@ -34,3 +34,7 @@ to quickly create a Cobra application.`,
 		fmt.Println("Simple plugin called")
 	},
 }
+
+func InitMain() {
+  MainCmd.Flags().BoolP("test", "t", false, "Help message for test")
+}
